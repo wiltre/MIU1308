@@ -2,7 +2,7 @@
  * @author Wil
  * Title: additem.html Style
  * By: Wiltre Santiago 
- * For: VFW Project 4
+ * For: MIU Project 1 
  * This is the js for additem.html
  */
 
@@ -94,11 +94,11 @@ window.addEventListener("DOMContentLoaded", function(){
 		var info			= {};
 			info.category	=["Item Category: ", element("fruitCategory").value];
 			info.fname		=["Fruit Name: ", element("fruitName").value];
-			info.sweb		=["Store Website: ", element("webSite").value];
-			info.sLocation	=["Store Location: ", storeLocation];
-			info.npurchase	=["Near Purchase: ", nPurchase];
-			info.priority	=["Item Priority: ", element("priority").value];
-			info.date		=["Date: ", element("date").value];
+			info.sweb		=["Store Name: ", element("webSite").value];
+			info.sLocation	=["Require Refrigeration: ", storeLocation];
+			info.npurchase	=["Favorite: ", nPurchase];
+			info.priority	=["Days that last: ", element("priority").value];
+			info.date		=["Purchased Date: ", element("date").value];
 			info.notes		=["Product Notes: ", element("itemsNotes").value];
 		//Save data in local storage
 		localStorage.setItem(id, JSON.stringify(info));
@@ -139,6 +139,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		  		var underInfo = obj[n][0] + "&emsp;" + obj[n][1];
 		  		makeSubli.innerHTML = underInfo;
 		  		makeSubli.appendChild(linksLi);	
+				console.log(obj.category[1]);
 		  	}
 		  	makeItemLinks(localStorage.key(i), linksLi) //This is the edit delete buttons
 		}
@@ -221,9 +222,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		element("webSite").value = item.sweb[1];
 		var rbutton = document.forms[0].sLocation;
 		for(var i=0; i<rbutton.length; i++){
-			if(rbutton[i].value == "National" && item.sLocation[1] == "National"){
+			if(rbutton[i].value == "Yes" && item.sLocation[1] == "Yes"){
 				rbutton[i].setAttribute("checked", "checked");
-			}else if(rbutton[i].value == "International" && item.sLocation[1] == "International"){
+			}else if(rbutton[i].value == "NO" && item.sLocation[1] == "NO"){
 				rbutton[i].setAttribute("checked", "checked");
 			}
 			
@@ -271,7 +272,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			return false;			
 		}
 	}
-	
+	// Function to validate the elements
 	function validateData(){
 		//elements to be checked
 		var getCategory = element("fruitCategory");
@@ -308,14 +309,15 @@ window.addEventListener("DOMContentLoaded", function(){
 			errorMsg.push(snameError);
 		}
 		
-		// Website Validator
-		var webver = /(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?(.aero|.asia|.biz|.cat|.com|.coop|.edu|.gov|.info|.int|.jobs|.mil|.mobi|.museum|.name|.net|.org|.pro|.tel|.travel)/;
+		// removing the web validator no need it for this app but is there in case that is needed later on.
+		// Store Validator Validator
+		/*var webver = /(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?(.aero|.asia|.biz|.cat|.com|.coop|.edu|.gov|.info|.int|.jobs|.mil|.mobi|.museum|.name|.net|.org|.pro|.tel|.travel)/;
 		if(!(webver.exec(getWeb.value))){
 			var webError = "Please enter a valid url";
 			getWeb.style.border = "2px solid red";
 			getWeb.style.backgroundColor= "#ffbbbb";
 			errorMsg.push(webError);
-		}
+		}*/
 		
 						
 		
@@ -343,7 +345,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	
 	//Global Variables
-	var fruitCategories = ["---Select a Category---","Clothing","Electronics","Transport","Jewerly","Other"]
+	var fruitCategories = ["---Select a Category---","Berries","Citrus","Grapes","Tropical","Other"]
 	var storeLocation
 	var nPurchase
 	var totalErrors = element("errors");
