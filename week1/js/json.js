@@ -2,8 +2,8 @@
  * @author Wil
  * Title: json data for the item app
  * By: Wiltre Santiago 
- * For: VFW Project 4
- * This is the js for index.html
+ * For: MIU 1308 Project 1
+ * This is the json file for the default data 
  */
 
 var json={
