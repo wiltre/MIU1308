@@ -139,7 +139,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		  		var underInfo = obj[n][0] + "&emsp;" + obj[n][1];
 		  		makeSubli.innerHTML = underInfo;
 		  		makeSubli.appendChild(linksLi);	
-				console.log(obj.category[1]);
+				// log for testing the categories console.log(obj.category[1]);
 		  	}
 		  	makeItemLinks(localStorage.key(i), linksLi) //This is the edit delete buttons
 		}
