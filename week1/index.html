@@ -19,12 +19,41 @@
 	</head>
 
 	<body>
-		<h1>Fruit Tracker</h1>
-	    <p> This app will help you to organize your favorite fruits to use them in the feauture</p>
-	    <div id="b">	    	
-	    	<button type="button"id="startApp" label="Start">Start App</button>
-	    </div>
-	    <h2>Click the button above to continue with the application.</h2>
+    	<!-- Below is the header Section -->
+		<div id="header"> 
+       		<a href="additem.html"><img src="images/heather.jpg" width="301" height="127"  alt=""/></a>
+       </div> <!-- end header section-->
+       <!--Below start search Div-->
+       <div id="search">
+			<h2><img src="images/search.png"/>Search Item </h2>
+			<input type="search" id="searchfield"/>
+		</div> <!--Finish Search section-->
+       
+       <!--Below start the Browse Section-->	
+       <div id="browse">
+
+			<h3>Browse your Saved items</h3>
+
+			<!--Below start List of Items-->
+			<div id="listItems">				
+				<ul>					
+
+					<li><button type="button" id="berries"		label="berries">Berries Group</button></li>
+
+					<li><button type="button" id="citrus" 	label="citrus">Citrus Fruits</button></li>
+
+					<li><button type="button" id="refrigeration" label="refrigeration">Require Refrigeration</button></li>
+
+					<li><button type="button" id="tropical" 		label="tropical">Tropical Fruits</button></li>
+
+					<li><button type="button" id="favorites" 	label="national">Favorite Fruits</button></li>
+
+				</ul>
+
+			</div> <!--End of the List of Items-->
+
+		</div>  <!--End of the Browse Section-->
+	    
 	    <script src="js/indexjs.js" type="text/javascript"></script>
 	</body>
 </html>
