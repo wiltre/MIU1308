@@ -4,6 +4,7 @@
  App name is Fruit Tracker*/
 
 
+
 /*below list the header setting*/
 #header{
 	height : 127px;
@@ -13,99 +14,11 @@
 	background-color : #BDBFC1;
 }
 
-/*Image for the Search Item area*/
-h2 img{
-	position:relative;
-	margin-right: 10px;
-	vertical-align:text-top;
-	top: -3px;
-	left: 3px;
-}
 
-/*Search area Div*/
-#search{
-	padding-top:5px;
-	position:relative;
-	top: 10px;
-	width: 299px;
-	height: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color : #fce7c0;
-	font-family : Arial,sans-serif;
-}
+/*Below are the custom icons for JQM*/
 
-/*Search Area Field*/
-#searchfield{
-	position: relative;
-	width: 220;
-	top: -30px;
-	margin-left: 140px;
-}
-
-/*Below are the item fields*/
-
-/*Browse*/
-#browse{
-	background-color : #f6ba43;
-	width: 299px;
-	margin-left: auto;
-	margin-right: auto;
-}
-h3 {
-	position: relative;
-	font-style:oblique;
-	top: 15px;
-	height: 20px;
-	width: 299px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
-	font-family : Arial,sans-serif;
-	font-weight: bold;
-	padding-top: 1px;
-}
-
-/*Below are the Block of list Items style */
-#listItems{
-	position: relative;
-	background-color: #f6ba43;
-	top: 20px;
-	width: 299px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-		
-}
-
-/*Below is the List items style*/
-#listItems ul li{
-	position: relative;
-	margin-top: 3px;
-	margin-bottom: 3px;
-	width: 150px;
-	height: 30px;
+.ui-icon-c_news {
+	background-image:url(../images/newslrw.png)
 	
-	
-		
-}
-
-/*Below is the buttons style*/
-#berries, #citrus, #refrigeration, #tropical, #favorites{
-	top: 3px;
-	bottom: 3px;
-	height: 25px;
-	width: 299px;
-	
-	-khtml-border-radius : 5px;
-	-moz-border-radius : 5px;
-	-webkit-border-radius : 5px;
-	background-color : #575756;
-	border-radius : 5px;
-	color : #ffffff;
-	font-family : Arial,sans-serif;
-	font-size : 15px;
-	font-weight: bold;
-	
-}
+	}
 

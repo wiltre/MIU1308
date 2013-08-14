@@ -1,41 +1,101 @@
 <!DOCTYPE html>
+<html lang="en">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- This is the first Project of MIU for FSO -->
 <!-- Course is MIU 1308-->
 <!-- Dev name Wiltre Santiago-->
 <!-- App name is Fruit Tracker-->
-
 <html>
+
 	<head>		
-		<meta charset="utf-8"/>
-		<meta name="keywords" content="html5, item, retail, wish list"/>
-		<meta name="description" content="Project 2 HTML5 application"/>
-		<meta name="robots" content="index, follow"/>
-		<meta name="viewport" content="user-scalable=no, width=device-width"/>
-		<meta name="HandheldFriendly" content="true"/>
-		<title>Item Wish List Main Page</title>
-		<link href="css/cssreset.css" rel="stylesheet" />
-		<link href="css/indexcss.css" rel="stylesheet" />
-	</head>
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="html5, item, retail, wish list"/>
+        <meta name="description" content="Project 2 HTML5 application"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fruit Tracker</title>
+        <link href="css/cssreset.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
+        <link href="css/indexcss.css" rel="stylesheet" /> 
+    </head>
 
 	<body>
-	   <div id="header">
+    	<div data-role="page" id="home">
+        <!--Below is header section-->
+        	<div data-role="header" data-position="fixed"> 
+           <h1>CTA Header</h1>
+           </div>
+        <!--Below is search area-->
+           <div data-role="fieldcontain">
+            <input name="" id="searchBar" placeholder="search your fruit" value="" type="search">
+        	</div>
+        <!--Below is Content Sesion-->
+           <div data-role="content">
+           <p><a href="#berries"> Berries Page</a> </p>
+           </div>
+                  
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                <ul>
+                    <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#about" data-icon="info" >About</a></li>
+                    <li><a href="#news" data-icon="c_news">News</a></li>
+                </ul>
+                </div><!-- End of the navbar -->
+           </div>
+		
+       </div>
+       
+       <!--Berries Group Page Below -->
+       <div data-role="page" id="berries" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>CTA Header</h1>
+           </div>
+           <div data-role="fieldcontain">
+            <input name="" id="searchBar" placeholder="search your fruit" value="" type="search">
+        	</div>
+           <div data-role="content">
+           <p>Paragraph Content</p>
+           </div>
+           
+           <div data-role="footer" data-position="fixed">
+           <h4>Footer Fixed</h4>
+           </div>
+		
+       </div>
+       
+    
+    
+    
+    <!--Java Script files call out-->    
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>  
+    <!--<script src="js/indexjs.js" type="text/javascript"></script> This is no longer need it JQM replace functionality-->
+	</body>
+</html>
+
+<!--*********************Below is the original code*********************-->
+	   <!--<div id="header">
        <a href="additem.html"><img src="images/heather.jpg" width="301" height="127"  alt=""/></a>
-       </div> <!-- end header section-->
+       </div>--> <!-- end header section-->
        
        <!--Below start search Div-->
-       <div id="search">
+       <!--<div id="search">
 			<h2><img src="images/search.png"/>Search Item </h2>
 			<input type="search" id="searchfield"/>
-		</div> <!--Finish Search section-->
+		</div>--> <!--Finish Search section-->
        
        <!--Below start the Browse Section-->	
-    	<div id="browse">
+    	<!--<div id="browse">
 
 			<h3>Browse your Saved items</h3>
-
+-->
 			<!--Below start List of Items-->
-            <div id="listItems">
+            <!--<div id="listItems">
                 <ul>
     
                         <li><button type="button" id="berries"		label="berries">Berries Group</button></li>
@@ -49,13 +109,8 @@
                         <li><button type="button" id="favorites" 	label="national">Favorite Fruits</button></li>
                </ul>
     
-            </div> <!--End of the List of Items-->
+            </div>--> <!--End of the List of Items-->
 
-		</div>  <!--End of the Browse Section-->
-	    
-    <script src="js/indexjs.js" type="text/javascript"></script>
-	</body>
-</html>
-
-
+		<!--</div> --> <!--End of the Browse Section-->
+        <!--*********************End of the Original Code*********************-->
 
