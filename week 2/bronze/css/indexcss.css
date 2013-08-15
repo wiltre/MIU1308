@@ -6,14 +6,12 @@
 
 
 /*below list the header setting*/
-#header{
-	height : 127px;
-	width: 301px;
+.headerImg {
+	height : 123px;
+	width: 320px;
 	margin-left: auto ;
   	margin-right: auto ;
-	background-color : #BDBFC1;
 }
-
 
 /*Below are the custom icons for JQM*/
 

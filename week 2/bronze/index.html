@@ -22,54 +22,192 @@
     </head>
 
 	<body>
+    	<!--**Home Page** Below -->
     	<div data-role="page" id="home">
         <!--Below is header section-->
-        	<div data-role="header" data-position="fixed"> 
-           <h1>CTA Header</h1>
+        	<div id="homeHeader" data-role="header" data-position="fixed"> 
+           <div class="headerImg"><a href="additem.html" target="_self"><img style src="images/heathera.jpg" width="320" height="123"  alt=""/></a></div>
            </div>
-        <!--Below is search area-->
-           <div data-role="fieldcontain">
-            <input name="" id="searchBar" placeholder="search your fruit" value="" type="search">
-        	</div>
-        <!--Below is Content Sesion-->
+           
+           <!--Below is Content Sesion-->
            <div data-role="content">
-           <p><a href="#berries"> Berries Page</a> </p>
-           </div>
-                  
+               <!--<div data-role="content"><h2 style="text-align:center; margin:-10px 0px 10px 0px;">Browse Saved Items</h2></div> **not sure  if I want to implement this -->
+               <!-- **Home Page** Data list below -->
+               <ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category" >           
+                   <li><a href="#berries" data-icon="info" >Berries Fruits</a></li>
+                   <li><a href="#citrus" data-icon="info" >Citrus  Fruits</a></li>
+                   <li><a href="#tropical" data-icon="info" >Tropical Fruits</a></li>
+                   <li><a href="#favorite" data-icon="info" >Favorite Fruits</a></li>
+                   <li><a href="#refrigeration" data-icon="info" >Require Refrigeration</a></li>
+               </ul><!-- End of the list -->
+        	</div><!-- End of the content -->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
                <div data-role="navbar"><!-- Start of the navbar -->
-                <ul>
-                    <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
-                    <li><a href="#about" data-icon="info" >About</a></li>
-                    <li><a href="#news" data-icon="c_news">News</a></li>
-                </ul>
-                </div><!-- End of the navbar -->
-           </div>
-		
-       </div>
+                   <ul>
+                       <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                       <li><a href="#about" data-icon="info" >About</a></li>
+                       <li><a href="#news" data-icon="c_news">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div>	<!-- End of the footer page -->	
+       </div><!-- End of the **Home page** -->
        
+       <!--**About Page** Below -->
+       <div data-role="page" id="about" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>About The App</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           <p>About Content</p>
+           </div><!-- End of the content -->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                   <ul>
+                       <li><a href="#home" data-icon="home" >Home</a></li>
+                       <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+                       <li><a href="#news" data-icon="c_news">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->
+       </div><!-- End of the **About page** -->
+       
+       <!--**News Page** Below -->
+       <div data-role="page" id="news" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Latest News </h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           <p>News Content</p>
+           </div><!-- End of the content -->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                   <ul>
+                       <li><a href="#home" data-icon="home" >Home</a></li>
+                       <li><a href="#about" data-icon="info" >About</a></li>
+                       <li><a href="#news" data-icon="c_news" class="ui-btn-active ui-state-persist">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->
+       </div><!-- End of the **News page** -->
+                      
+           
        <!--Berries Group Page Below -->
        <div data-role="page" id="berries" data-add-back-btn="true">
         	<div data-role="header" data-position="fixed" > 
-           <h1>CTA Header</h1>
-           </div>
-           <div data-role="fieldcontain">
-            <input name="" id="searchBar" placeholder="search your fruit" value="" type="search">
-        	</div>
+           <h1>Berries Fruits</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
            <div data-role="content">
-           <p>Paragraph Content</p>
+           	<p>here it goes the berries description</p>
            </div>
            
+           <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
-           <h4>Footer Fixed</h4>
-           </div>
-		
-       </div>
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **berries page** -->	
        
-    
-    
+       <!--Citrus Group Page Below -->
+       <div data-role="page" id="citrus" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Citrus Fruits</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<p>here it goes the citrus description</p>
+           </div>
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **citrus page** -->	
+		
+       <!--Tropical Group Page Below -->
+       <div data-role="page" id="tropical" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Tropical Fruit</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<p>here it goes the Tropical description</p>
+           </div>
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Tropical page** -->  
+         
+    	<!--Favorite Group Page Below -->
+       <div data-role="page" id="favorite" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Favorite Fruit</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<p>here it goes the Favorite description</p>
+           </div>
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Favorite page** -->
+       
+       <!--Require Refrigeration Page Below -->
+       <div data-role="page" id="refrigeration" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Refrigerated Fruits</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<p>here it goes the Refrigerated description</p>
+           </div>
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Require Refrigeration page** -->
     
     <!--Java Script files call out-->    
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
