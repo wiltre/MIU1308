@@ -13,6 +13,7 @@
   	margin-right: auto ;
 }
 
+
 /*Below are the custom icons for JQM*/
 
 .ui-icon-c_news {
@@ -20,3 +21,16 @@
 	
 	}
 
+.aboutp {
+	margin-left:15px;
+	color:#0C9;
+	
+	}
+
+#aboutih {
+	font-weight:bolder;
+	margin-bottom: 15px;
+	}
+#aboutli {
+	margin-top: 15px;
+	}
