@@ -33,12 +33,47 @@
            <div data-role="content">
                <!--<div data-role="content"><h2 style="text-align:center; margin:-10px 0px 10px 0px;">Browse Saved Items</h2></div> **not sure  if I want to implement this -->
                <!-- **Home Page** Data list below -->
-               <ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category" >           
-                   <li><a href="#berries" data-icon="info" >Berries Fruits</a></li>
-                   <li><a href="#citrus" data-icon="info" >Citrus  Fruits</a></li>
-                   <li><a href="#tropical" data-icon="info" >Tropical Fruits</a></li>
-                   <li><a href="#favorite" data-icon="info" >Favorite Fruits</a></li>
-                   <li><a href="#refrigeration" data-icon="info" >Require Refrigeration</a></li>
+               <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Fruit Category" >           
+                   <li data-role="collapsible"  data-inset="true">                   			
+                       <h3>Berry Photos</h3>                
+                       <div class="ui-grid-b">
+                           <div class="ui-block-a"><a href="#berries" data-icon="info" ><img src="images/blueberry_s.jpg"></a></div>
+                           <div class="ui-block-b"><a href="#berries" data-icon="info" ><img src="images/strawberry_s.jpg"></a></div>
+                           <div class="ui-block-c"><a href="#berries" data-icon="info" ><img src="images/rasberry_s.jpg"></a></div>
+                       </div><!-- /grid-b -->
+                   </li>
+                	 <li data-role="collapsible" >                   			
+                       <h3>Citrus PHotos</h3>                
+                       <div class="ui-grid-b">
+                           <div class="ui-block-a"><a href="#citrus" data-icon="info" ><img src="images/orange_s.jpg"></a></div>
+                           <div class="ui-block-b"><a href="#citrus" data-icon="info" ><img src="images/grapefruit_s.jpg"></a></div>
+                           <div class="ui-block-c"><a href="#citrus" data-icon="info" ><img src="images/lemon_s.jpg"></a></div>
+                       </div><!-- /grid-b -->
+                   </li>
+                   <li data-role="collapsible" >                   			
+                       <h3>Tropical Photos</h3>                
+                       <div class="ui-grid-b">
+                           <div class="ui-block-a"><a href="#tropical" data-icon="info" ><img src="images/coconut_s.jpg"></a></div>
+                           <div class="ui-block-b"><a href="#tropical" data-icon="info" ><img src="images/banana_s.jpg"></a></div>
+                           <div class="ui-block-c"><a href="#tropical" data-icon="info" ><img src="images/watermellon_s.jpg"></a></div>
+                       </div><!-- /grid-b -->
+                   </li>
+                	 <li data-role="collapsible" >                   			
+                       <h3>Favorite Fruits</h3>                
+                       <div class="ui-grid-b">
+                           <div class="ui-block-a"><a href="#favorite" data-icon="info" ><img src="images/banana_s.jpg"></a></div>
+                           <div class="ui-block-b"><a href="#favorite" data-icon="info" ><img src="images/blueberry_s.jpg"></a></div>
+                           <div class="ui-block-c"><a href="#favorite" data-icon="info" ><img src="images/coconut_s.jpg"></a></div>
+                       </div><!-- /grid-b -->
+                   </li>
+                   <li data-role="collapsible" >                   			
+                       <h3>Require Refrigeration</h3>                
+                       <div class="ui-grid-b">
+                           <div class="ui-block-a"><a href="#refrigeration" data-icon="info" ><img src="images/strawberry_s.jpg"></a></div>
+                           <div class="ui-block-b"><a href="#refrigeration" data-icon="info" ><img src="images/grapes_s.jpg"></a></div>
+                           <div class="ui-block-c"><a href="#refrigeration" data-icon="info" ><img src="images/blueberry_s.jpg"></a></div>
+                       </div><!-- /grid-b -->
+                   </li>
                </ul><!-- End of the list -->
         	</div><!-- End of the content -->
            
@@ -123,15 +158,31 @@
        </div><!-- End of the **News page** -->
                       
            
-       <!--Berries Group Page Below -->
+       !--Berries Group Page Below -->
        <div data-role="page" id="berries" data-add-back-btn="true">
         	<div data-role="header" data-position="fixed" > 
            <h1>Berries Fruits</h1>
            </div><!-- End of the Header -->
            <!-- content goes below -->
            <div data-role="content">
-           	<p>here it goes the berries description</p>
-           </div>
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/rasberry.jpg">
+                  	<h2>Rasberry</h2>
+                  	<p>Very good source of vitamins</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/blueberry.jpg">
+                    	<h2>Blueberries</h2>
+                    	<p>Help softens dry skin, boosts your brain</p></a>
+                	</li>
+                 	<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
@@ -150,10 +201,26 @@
         	<div data-role="header" data-position="fixed" > 
            <h1>Citrus Fruits</h1>
            </div><!-- End of the Header -->
-           <!-- content goes below -->
+            <!-- content goes below -->
            <div data-role="content">
-           	<p>here it goes the citrus description</p>
-           </div>
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/lemon.jpg">
+                  	<h2>Lemon</h2>
+                  	<p>Good for antibacterial and immune-boosting</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/grapefruit.jpg">
+                    	<h2>Grapefruit</h2>
+                    	<p>Excellent source of vitamin C</p></a>
+                	</li>
+                 	<li data-icon="false" ><a href="#home">
+                    	<img src="images/orange.jpg">
+                    	<h2>Orange</h2>
+                    	<p>Rich on Vitamin C</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
@@ -174,8 +241,24 @@
            </div><!-- End of the Header -->
            <!-- content goes below -->
            <div data-role="content">
-           	<p>here it goes the Tropical description</p>
-           </div>
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/coconut.jpg">
+                  	<h2>Coconut</h2>
+                  	<p>Coconut oil is very helthy for your body</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/watermelon.jpg">
+                    	<h2> Watermelon</h2>
+                    	<p> High in nutrients and low in calories</p></a>
+                	</li>
+                 		<li data-icon="false" ><a href="#home">
+                    	<img src="images/banana.jpg">
+                    	<h2>Banana</h2>
+                    	<p> Rich on potassium for your bones.</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
@@ -196,8 +279,25 @@
            </div><!-- End of the Header -->
            <!-- content goes below -->
            <div data-role="content">
-           	<p>here it goes the Favorite description</p>
-           </div>
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/coconut.jpg">
+                  	<h2>Coconut</h2>
+                  	<p>Coconut oil is very helthy for your body</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+
+                 		<li data-icon="false" ><a href="#home">
+                    	<img src="images/banana.jpg">
+                    	<h2>Banana</h2>
+                    	<p> Rich on potassium for your bones.</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
@@ -218,8 +318,24 @@
            </div><!-- End of the Header -->
            <!-- content goes below -->
            <div data-role="content">
-           	<p>here it goes the Refrigerated description</p>
-           </div>
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Grapes</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+                	<li data-icon="false" ><a href="#home">
+                    	<img src="images/grapes.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+                 	<li data-icon="false" ><a href="#home">
+                  	<img src="images/rasberry.jpg">
+                  	<h2>Rasberry</h2>
+                  	<p>Very good source of vitamins</p></a>
+                	</li>
+           	</ul>
+           </div><!--end of content-->
            
            <!-- Footer Section -->
            <div data-role="footer" data-position="fixed">
