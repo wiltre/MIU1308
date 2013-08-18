@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- This is the first Project of MIU for FSO -->
+<!-- Course is MIU 1308-->
+<!-- Dev name Wiltre Santiago-->
+<!-- App name is Fruit Tracker-->
+<html>
+
+	<head>		
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="html5, item, retail, wish list"/>
+        <meta name="description" content="Project 2 HTML5 application"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fruit Tracker</title>
+        <link href="css/cssreset.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
+        <link href="css/indexcss.css" rel="stylesheet" /> 
+    </head>
+
+	<body>
+    	<!--**Home Page** Below -->
+    	<div data-role="page" id="home">
+        <!--Below is header section-->
+        	<div id="homeHeader" data-role="header" data-position="fixed"> 
+           <div class="headerImg"><a href="additem.html" target="_self"><img style src="images/heathera.jpg" width="320" height="123"  alt=""/></a></div>
+           </div>
+           
+           <!--Below is Content Sesion-->
+           <div data-role="content">
+               <!--<div data-role="content"><h2 style="text-align:center; margin:-10px 0px 10px 0px;">Browse Saved Items</h2></div> **not sure  if I want to implement this -->
+               <!-- **Home Page** Data list below -->
+               <ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category" >           
+                   <li><a href="#berries" data-icon="info" >Berries Fruits</a></li>
+                   <li><a href="#citrus" data-icon="info" >Citrus  Fruits</a></li>
+                   <li><a href="#tropical" data-icon="info" >Tropical Fruits</a></li>
+                   <li><a href="#favorite" data-icon="info" >Favorite Fruits</a></li>
+                   <li><a href="#refrigeration" data-icon="info" >Require Refrigeration</a></li>
+               </ul><!-- End of the list -->
+        	</div><!-- End of the content -->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                   <ul>
+                       <li><a href="#home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li>
+                       <li><a href="#about" data-icon="info" >About</a></li>
+                       <li><a href="#news" data-icon="c_news">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div>	<!-- End of the footer page -->	
+       </div><!-- End of the **Home page** -->
+       
+       <!--**About Page** Below -->
+       <div data-role="page" id="about" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>About The App</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+               <h1 id="aboutih">About the App</h1>
+               
+               <p1 class="aboutp">My Name is Wiltre Santiago
+                this the app for week 2 for MIU
+                    Below you will findl usefull links
+                   with my app Information</p1>
+               <div data-role="collapsible-set" data-theme="b" data-content-theme="a">
+                    <div data-role="collapsible">
+                        <h3>Git Hub Main Branch</h3>
+                        <p><a href="https://github.com/wiltre/MIU1308">Git Hub Main Branch</a></p>
+                    </div>
+                	  <div data-role="collapsible">
+                        <h3>Git Hub Week 2</h3>
+                        <p><a href="https://github.com/wiltre/MIU1308/tree/master/week%202">Git Hub Week2 Branch</a></p>
+                    </div>
+                	  <div data-role="collapsible">
+                        <h3>Git Hub Bronze Branch</h3>
+                        <p><a href="https://github.com/wiltre/MIU1308/tree/master/week%202/bronze">Git Hub Bronze Branch</a></p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Git Hub Gold Branch</h3>
+                        <p><a href="https://github.com/wiltre/MIU1308/tree/master/week%202/gold">Git Hub Gold Branch</a></p>
+                    </div>
+                	  
+                </div><!-- End of the content -->
+           </div><!-- End of the content -->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+           <p><a href="../bronze/index.html" data-role="button" data-corners="false" data-theme="b" target="_self">Bronze App</a></p>
+               <div data-role="navbar"><!-- Start of the navbar -->
+                   <ul>
+                       <li><a href="#home" data-icon="home" >Home</a></li>
+                       <li><a href="#about" data-icon="info" class="ui-btn-active ui-state-persist">About</a></li>
+                       <li><a href="#news" data-icon="c_news">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->
+       </div><!-- End of the **About page** -->
+       
+       <!--**News Page** Below -->
+       <div data-role="page" id="news" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Latest News </h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           <ul data-role="listview" data-filter="true" data-filter-placeholder="Search news"data-ajax="false" data-inset="true" data-theme="d">
+               <li data-role="list-divider">News and Updates</li>
+               <li><a href="http://consciouslifenews.com/tag/kiwi-fruit-health-benefits/" target="new">08/07/13 Kiwi Benefits</a></li>
+               <li><a href="http://fruitsbenefits.com/home-remedies/best-fruits-for-losing-weight/" target="new">08/01/13 Fruits for weight control</a></li>
+               <li><a href="http://www.naturalnews.com/040313_fruits_energy_papaya.html" target="new">05/13/13 Top six fruits for energy</a></li>
+           </ul><!-- End of the content -->
+           </div>
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                   <ul>
+                       <li><a href="#home" data-icon="home" >Home</a></li>
+                       <li><a href="#about" data-icon="info" >About</a></li>
+                       <li><a href="#news" data-icon="c_news" class="ui-btn-active ui-state-persist">News</a></li>
+                   </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->
+       </div><!-- End of the **News page** -->
+                      
+           
+       <!--Berries Group Page Below -->
+       <div data-role="page" id="berries" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Berries Fruits</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/rasberry.jpg">
+                  	<h2>Rasberry</h2>
+                  	<p>Very good source of vitamins</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/blueberry.jpg">
+                    	<h2>Blueberries</h2>
+                    	<p>Help softens dry skin, boosts your brain</p></a>
+                	</li>
+                 	<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **berries page** -->	
+       
+       <!--Citrus Group Page Below -->
+       <div data-role="page" id="citrus" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Citrus Fruits</h1>
+           </div><!-- End of the Header -->
+            <!-- content goes below -->
+           <div data-role="content">
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/lemon.jpg">
+                  	<h2>Lemon</h2>
+                  	<p>Good for antibacterial and immune-boosting</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/grapefruit.jpg">
+                    	<h2>Grapefruit</h2>
+                    	<p>Excellent source of vitamin C</p></a>
+                	</li>
+                 	<li data-icon="false" ><a href="#home">
+                    	<img src="images/orange.jpg">
+                    	<h2>Orange</h2>
+                    	<p>Rich on Vitamin C</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **citrus page** -->	
+		
+       <!--Tropical Group Page Below -->
+       <div data-role="page" id="tropical" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Tropical Fruit</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/coconut.jpg">
+                  	<h2>Coconut</h2>
+                  	<p>Coconut oil is very helthy for your body</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                  	<img src="images/watermelon.jpg">
+                    	<h2> Watermelon</h2>
+                    	<p> High in nutrients and low in calories</p></a>
+                	</li>
+                 		<li data-icon="false" ><a href="#home">
+                    	<img src="images/banana.jpg">
+                    	<h2>Banana</h2>
+                    	<p> Rich on potassium for your bones.</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Tropical page** -->  
+         
+    	<!--Favorite Group Page Below -->
+       <div data-role="page" id="favorite" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Favorite Fruit</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                  	<img src="images/coconut.jpg">
+                  	<h2>Coconut</h2>
+                  	<p>Coconut oil is very helthy for your body</p></a>
+                	</li>
+                	<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+
+                 		<li data-icon="false" ><a href="#home">
+                    	<img src="images/banana.jpg">
+                    	<h2>Banana</h2>
+                    	<p> Rich on potassium for your bones.</p></a>
+               	</li>
+           	</ul>
+           </div><!--end of content-->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Favorite page** -->
+       
+       <!--Require Refrigeration Page Below -->
+       <div data-role="page" id="refrigeration" data-add-back-btn="true">
+        	<div data-role="header" data-position="fixed" > 
+           <h1>Refrigerated Fruits</h1>
+           </div><!-- End of the Header -->
+           <!-- content goes below -->
+           <div data-role="content">
+           	<ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="Search Fruit Category"  data-inset="true">
+             		<li data-icon="false" ><a href="#home">
+                    	<img src="images/strawberry.jpg">
+                    	<h2>Grapes</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+                	<li data-icon="false" ><a href="#home">
+                    	<img src="images/grapes.jpg">
+                    	<h2>Strawberry</h2>
+                    	<p>Support the cardiovascular system</p></a>
+               	</li>
+                 	<li data-icon="false" ><a href="#home">
+                  	<img src="images/rasberry.jpg">
+                  	<h2>Rasberry</h2>
+                  	<p>Very good source of vitamins</p></a>
+                	</li>
+           	</ul>
+           </div><!--end of content-->
+           
+           <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="#home" data-icon="home" >Home</a></li>
+                        <li><a href="#about" data-icon="info" >About</a></li>
+                        <li><a href="#news" data-icon="c_news">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->		
+       </div><!-- End of the **Require Refrigeration page** -->
+    
+    <!--Java Script files call out-->    
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>  
+    <!--<script src="js/indexjs.js" type="text/javascript"></script> This is no longer need it JQM replace functionality-->
+	</body>
+</html>
+
+<!--*********************Below is the original code*********************-->
+	   <!--<div id="header">
+       <a href="additem.html"><img src="images/heather.jpg" width="301" height="127"  alt=""/></a>
+       </div>--> <!-- end header section-->
+       
+       <!--Below start search Div-->
+       <!--<div id="search">
+			<h2><img src="images/search.png"/>Search Item </h2>
+			<input type="search" id="searchfield"/>
+		</div>--> <!--Finish Search section-->
+       
+       <!--Below start the Browse Section-->	
+    	<!--<div id="browse">
+
+			<h3>Browse your Saved items</h3>
+-->
+			<!--Below start List of Items-->
+            <!--<div id="listItems">
+                <ul>
+    
+                        <li><button type="button" id="berries"		label="berries">Berries Group</button></li>
+    
+                        <li><button type="button" id="citrus" 	label="citrus">Citrus Fruits</button></li>
+    
+                        <li><button type="button" id="refrigeration" label="refrigeration">Require Refrigeration</button></li>
+    
+                        <li><button type="button" id="tropical" 		label="tropical">Tropical Fruits</button></li>
+    
+                        <li><button type="button" id="favorites" 	label="national">Favorite Fruits</button></li>
+               </ul>
+    
+            </div>--> <!--End of the List of Items-->
+
+		<!--</div> --> <!--End of the Browse Section-->
+        <!--*********************End of the Original Code*********************-->
+

@@ -1,0 +1,36 @@
+/* This is the first CSS style for the main page 
+ FSO Course is MIU 1308
+ Developer name Wiltre Santiago
+ App name is Fruit Tracker*/
+
+
+
+/*below list the header setting*/
+.headerImg {
+	height : 123px;
+	width: 320px;
+	margin-left: auto ;
+  	margin-right: auto ;
+}
+
+
+/*Below are the custom icons for JQM*/
+
+.ui-icon-c_news {
+	background-image:url(../images/newslrw.png)
+	
+	}
+
+.aboutp {
+	margin-left:15px;
+	color:#0C9;
+	
+	}
+
+#aboutih {
+	font-weight:bolder;
+	margin-bottom: 15px;
+	}
+#aboutli {
+	margin-top: 15px;
+	}
