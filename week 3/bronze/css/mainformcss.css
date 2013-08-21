@@ -204,3 +204,14 @@ label{
 	width: 250px;
 }
 
+#reqnote{
+	text-align: center;
+	font-family: serif;
+	font-size: small;
+	color:rgba(113,100,150,0.61)
+
+}
+
+span {
+	margin-right: 5px;
+}

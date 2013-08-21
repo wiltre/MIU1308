@@ -34,3 +34,9 @@
 #aboutli {
 	margin-top: 15px;
 	}
+.tlabel{
+	width: 100px;
+	text-align: center;
+	background-color:#c4c4c4;
+	margin-top: -3px;
+}

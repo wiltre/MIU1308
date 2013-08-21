@@ -23,8 +23,8 @@
 				<fieldset id="field">
 					<h1>Input your fruit</h1>
 					<ul>
-						<li id="category"><label id="litem" for="item"> Fruit Category: </label></li>
-						<li><label id="fname" for="fruitName">Fruit Name:</label><input type="text" id="fruitName"/></li>
+						<li id="category"><label id="litem" for="item"> <span>*</span>Fruit Category:</label></li>
+						<li><label id="fname" for="fruitName"><span>*</span>Fruit Name: </label><input type="text" id="fruitName"/></li>
 						<li><label id="lweb" for="webSite">Sale Place:</label><input type="text" id="webSite" placeholder="       Wegmas Supermarket  " /></li>
 						<li> Require Refrigeration
 							<ul>
@@ -40,6 +40,7 @@
 					</ul>
 					<ul id="errors"> </ul>
 				</fieldset>
+				<div id="reqnote"> Values with the symbol * are required before submission</div>
 				<input type="button" value="Submit the item" id="submit"/>
 				<div id="dataControls">  
 					<a href="#" id="display"> Display Stored Data </a>
