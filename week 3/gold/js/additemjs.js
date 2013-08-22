@@ -6,15 +6,16 @@
  * This is the js for additem.html
  */
 
-// alert("Hello World Add Item"); //testing the js file
+/* alert("Hello World Add Item"); //testing the js file */
+
 
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 });	
 		
-$('#addItem').on('pageinit', function(){
+$('#addFruit').on('pageinit', function(){
 
-		var myForm = $('#formId');
+		var myForm = $('#fruittracker');
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
 			},
@@ -27,6 +28,8 @@ $('#addItem').on('pageinit', function(){
 	//any other code needed for addItem page goes here
 	
 });
+
+
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
@@ -49,6 +52,7 @@ var	deleteItem = function (){
 var clearLocal = function(){
 
 };
+
 
 
 

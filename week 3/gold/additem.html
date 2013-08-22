@@ -15,11 +15,11 @@
 		<title>Fruit Tracker</title>
 		<link href="css/cssreset.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
-		<!-- <link href="css/mainformcss.css" rel="stylesheet" /> <<<<--** Old css style Code -->
+		href="css/mainformcss.css" rel="stylesheet" /> <<<<--** Old css style Code -->
 	</head>
 	
 	<body>	
-		<div data-role="page" id="home">
+		<div data-role="page" id="addFruit">
 			<div data-role="header" data-position="fixed">
 				<h1>Input your fruit</h1>
 			</div>
@@ -29,7 +29,7 @@
 				
 				<div data-role="fieldcontain">
 					<label for="item"> Fruit Category: </label>
-					<select name="item" id="item">
+					<select name="item" id="item" data-native-menu="false">
 						<option data-placeholder="true"> --- Select a Category ---</option>
 						<option value="Berries">Berries </option>
 						<option value="Citrus">Citrus </option>
@@ -42,12 +42,12 @@
 				
 				<div data-role="fieldcontain">
 					<label id="fname" for="fruitName">Fruit Name:</label>
-					<input type="text" name="fruitName" id="fruitName"/>
+					<input type="text" name="fruitName" id="fruitName" class="required"/>
 				</div>
 				
 				<div data-role="fieldcontain">
 					<label id="lweb" for="webSite">Sale Place:</label>
-					<input type="text" name="webSite" id="webSite"  placeholder=" store or supermarket name  " />
+					<input type="text" name="webSite" id="webSite"  placeholder=" type store name  " class="required" />
 				</div>
 				
 				<div data-role="fieldcontain" >
@@ -71,7 +71,7 @@
 				
 				<div data-role="fieldcontain">
 					<label for="priority">Days that last:</label>
-					<input type="range" name="priority" min="1" max="10" id="priority"/>
+					<input type="range" name="priority" value="1" min="1" max="10" id="priority"/>
 				</div>
 				
 				<div data-role="fieldcontain">
@@ -85,11 +85,7 @@
 				</div>
 				
 				<input type="submit" value="Submit the item" id="submit"/>
-				<ul>
-				
-				
-				</ul>
-				
+				<input type="reset" value="Reset Form" id="reset"/>			
 				</form>
 				
 			</div> <!-- End of content -->
@@ -108,10 +104,12 @@
 		</div>
 		
 		<!-- 	Scripts are below	 -->
+		
 		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>  
+		<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>	
 		<script src="js/json.js" type="text/javascript"></script>			    
-       <!--  <script src="js/additemjs.js" type="text/javascript"></script> -->
+        <script src="js/additemjs.js" type="text/javascript"></script> 
 	</body>
 </html>
 
