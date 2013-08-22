@@ -15,7 +15,7 @@
 		<title>Fruit Tracker</title>
 		<link href="css/cssreset.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
-		href="css/mainformcss.css" rel="stylesheet" /> <<<<--** Old css style Code -->
+		<link href="css/mainformcss.css" rel="stylesheet" />
 	</head>
 	
 	<body>	
@@ -29,8 +29,8 @@
 				
 				<div data-role="fieldcontain">
 					<label for="item"> Fruit Category: </label>
-					<select name="item" id="item" data-native-menu="false">
-						<option data-placeholder="true"> --- Select a Category ---</option>
+					<select name="item" id="item" data-native-menu="false" class="required">
+						<option data-placeholder="true" value> --- Select a Category ---</option>
 						<option value="Berries">Berries </option>
 						<option value="Citrus">Citrus </option>
 						<option value="Grapes">Grapes </option>
@@ -42,12 +42,12 @@
 				
 				<div data-role="fieldcontain">
 					<label id="fname" for="fruitName">Fruit Name:</label>
-					<input type="text" name="fruitName" id="fruitName" class="required"/>
+					<input type="text" name="fruitName" id="fruitName" placeholder=" type the fruit name"class="required"/>
 				</div>
 				
 				<div data-role="fieldcontain">
-					<label id="lweb" for="webSite">Sale Place:</label>
-					<input type="text" name="webSite" id="webSite"  placeholder=" type store name  " class="required" />
+					<label id="lweb" for="storeName">Sale Place:</label>
+					<input type="text" name="storeName" id="storeName"  placeholder=" type store name  " class="required" />
 				</div>
 				
 				<div data-role="fieldcontain" >
@@ -64,14 +64,14 @@
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup">
 						<legend>Check below if is your favorite</legend>
-						<label for="nearPurchase">Favorite</label>
-						<input type="checkbox" name="nearPurchase" id="nearPurchase" />
+						<label for="favorite">Favorite</label>
+						<input type="checkbox" name="favorite" id="favorite" />
 					</fieldset>
 				</div>
 				
 				<div data-role="fieldcontain">
-					<label for="priority">Days that last:</label>
-					<input type="range" name="priority" value="1" min="1" max="10" id="priority"/>
+					<label for="days">Days that last:</label>
+					<input type="range" name="days" value="1" min="1" max="10" id="days"/>
 				</div>
 				
 				<div data-role="fieldcontain">

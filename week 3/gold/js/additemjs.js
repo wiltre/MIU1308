@@ -7,7 +7,9 @@
  */
 
 /* alert("Hello World Add Item"); //testing the js file */
-
+var storeData = function(data){
+	console.log(data)
+}; 
 
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
@@ -19,6 +21,7 @@ $('#addFruit').on('pageinit', function(){
 		    myForm.validate({
 			invalidHandler: function(form, validator) {
 			},
+			
 			submitHandler: function() {
 		var data = myForm.serializeArray();
 			storeData(data);
@@ -41,9 +44,7 @@ var getData = function(){
 
 };
 
-var storeData = function(data){
-	
-}; 
+
 
 var	deleteItem = function (){
 			
