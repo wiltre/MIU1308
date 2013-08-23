@@ -23,13 +23,13 @@
 			<div data-role="header" data-position="fixed">
 				<h1>Input your fruit</h1>
 			</div>
-			
-			<div data-role="content">
+			<!-- Content and form are below  -->
+			<div data-role="content" data-ajax="false">
 				<form action="#" method="post" id="fruittracker">
 				
 				<div data-role="fieldcontain">
-					<label for="item"> Fruit Category: </label>
-					<select name="item" id="item" data-native-menu="false" class="required">
+					<label for="FruitCategory"> Fruit Category: </label>
+					<select name="FruitCategory" id="FruitCategory" data-native-menu="false" class="required">
 						<option data-placeholder="true" value> --- Select a Category ---</option>
 						<option value="Berries">Berries </option>
 						<option value="Citrus">Citrus </option>
@@ -37,22 +37,27 @@
 						<option value="Tropical">Tropical </option>
 						<option value="Others">Others </option>
 					</select>
-										
+					<div class="requireds">* Required field </div>					
 				</div>
 				
+			
 				<div data-role="fieldcontain">
-					<label id="fname" for="fruitName">Fruit Name:</label>
-					<input type="text" name="fruitName" id="fruitName" placeholder=" type the fruit name"class="required"/>
+					<label id="fruitNames" for="fruitName">Fruit Name:</label>
+					<input type="text" name="FruitName" id="FruitName" placeholder=" type the fruit name" class="required"/>
+					<div class="requireds">* Required field </div>
 				</div>
+
 				
 				<div data-role="fieldcontain">
-					<label id="lweb" for="storeName">Sale Place:</label>
-					<input type="text" name="storeName" id="storeName"  placeholder=" type store name  " class="required" />
+					<label id="lweb" for="StoreName">Sale Place:</label>
+					<input type="text" name="StoreName" id="StoreName"  placeholder=" type store name  " class="required" />
+					<div class="requireds">* Required field </div>
 				</div>
 				
 				<div data-role="fieldcontain" >
 					<fieldset data-role="controlgroup" data-type="horizontal">
 						<legend>Require Refrigeration: </legend>
+						<div class="hint">Select if require refrigeration</div>
 						<input type="radio" value="Yes" name="refrigeration" id="Yes" />
 						<label for="Yes">YES</label>
 						<input type="radio" value="No" name="refrigeration" id="No"  />
@@ -76,7 +81,7 @@
 				
 				<div data-role="fieldcontain">
 					<label for="date">Purchased Date:</label>
-					<input type="date" name="date" id="date"/>
+					<input type="date" name="date" id="date"placeholder=" MM/DD/YYYY"/>
 				</div>
 				
 				<div data-role="fieldcontain">
@@ -84,8 +89,11 @@
 					<textarea id="itemsNotes"> </textarea>
 				</div>
 				
-				<input type="submit" value="Submit the item" id="submit"/>
+				<input type="submit" value="Submit the item" id="submit" data-theme="a"/>
 				<input type="reset" value="Reset Form" id="reset"/>			
+				
+				
+				<!-- <a href="#addFruiterrors" id="erroslik" data-rel="dialog" data-transition="pop"> Open Errors</a>  pop error-->
 				</form>
 				
 			</div> <!-- End of content -->
@@ -94,14 +102,37 @@
            <div data-role="footer" data-position="fixed">
                <div data-role="navbar"><!-- Start of the navbar -->
                     <ul>
-                        <li><a href="index.html" data-icon="home" >Home</a></li>
-                        <li><a href="#about" data-icon="info" >About</a></li>
-                        <li><a href="#news" data-icon="c_news">News</a></li>
+                        <li><a href="index.html#home" rel="external" target="_self" data-icon="home" data-transition="slide">Home</a></li>
+                        <li><a href="index.html#about" target="_self" data-icon="info" data-transition="slide">About</a></li>
+                        <li><a href="index.html#news" target="_self" data-icon="c_news" data-transition="slide">News</a></li>
                     </ul>
                </div><!-- End of the navbar -->
            </div><!-- End of the footer page -->	
+		</div> <!-- End of the Main Page Form -->
 		
-		</div>
+		
+		<!-- Dialog box page below  -->
+		
+	<!-- Code below it was the attempt of the pop list view 
+	<div data-role="dialog" id="addFruiterrors">
+		
+			<div data-role="header" data-position="fixed">
+				<h1>Some fields are missing </h1>				
+			</div>
+			
+			
+			<div data-role"content">
+				<ul id="errosspace">
+					<li> Test </li>
+					<li> Test </li>
+					<li> Test </li>
+					<li> Test </li>
+				</ul>			
+			</div> 
+		</div> 
+-->
+		
+		
 		
 		<!-- 	Scripts are below	 -->
 		

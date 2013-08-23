@@ -7,9 +7,8 @@
  */
 
 /* alert("Hello World Add Item"); //testing the js file */
-var storeData = function(data){
-	console.log(data)
-}; 
+//getElementById Function
+	 
 
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
@@ -18,15 +17,17 @@ $('#home').on('pageinit', function(){
 $('#addFruit').on('pageinit', function(){
 
 		var myForm = $('#fruittracker');
-		    myForm.validate({
-			invalidHandler: function(form, validator) {
-			},
 			
-			submitHandler: function() {
-		var data = myForm.serializeArray();
-			storeData(data);
-		}
-	});
+			
+		    myForm.validate({
+				invalidHandler: function(form, validator) {
+				},
+			
+				submitHandler: function() {
+					var data = myForm.serializeArray();
+					storeData(data);
+					}
+			});
 	
 	//any other code needed for addItem page goes here
 	
@@ -35,14 +36,79 @@ $('#addFruit').on('pageinit', function(){
 
 
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
+var refrigeration
+
+var favorite
+
+
+
+// Get Element function
+function element(a){
+	var getElement = document.getElementById(a);
+	return getElement;		
+}
+
+
+// function to verify the checkbox Value 
+function checkBoxValue(){
+	if(element("favorite").checked){
+		favorite = "Yes";
+	} else {
+		favorite = "No";
+	}
+}
+
+// Radio Value Function 
+function radioValue(){
+	var rbutton = document.forms[0].refrigeration;
+	for(var i=0; i<rbutton.length; i++){
+		if(rbutton[i].checked){
+			refrigeration = rbutton[i].value;	
+		}			
+	}
+}
+
+
 
 var autofillData = function (){
 	 
 };
 
 var getData = function(){
+		
 
 };
+
+var storeData = function saveData(key){ //if there is not key it will create one
+
+	
+		if (!key) {
+			var id = Math.floor(Math.random()*100001);
+		}else{ //if there is a key just keep the key to edit the item
+			id = key
+		}
+		radioValue();
+		checkBoxValue();
+		//Get all the values of the form  and store them 
+		//Object properties contain array with the form label and value. 
+		var info			= {};
+			info.category	=["Item Category: ", element("FruitCategory").value];
+			info.fname		=["Fruit Name: ", element("FruitName").value];
+			info.sweb		=["Store Name: ", element("StoreName").value];
+			info.sLocation	=["Require Refrigeration: ", refrigeration];
+			info.favorite	=["Favorite: ", favorite];
+			info.priority	=["Days that last: ", element("days").value];
+			info.date		=["Purchased Date: ", element("date").value];
+			info.notes		=["Product Notes: ", element("itemsNotes").value];
+		//Save data in local storage
+		localStorage.setItem(id, JSON.stringify(info));
+		alert("Info has been Saved!! :) ");
+		window.location="#addFruit";
+		//end;
+			 				
+	};		
+	
+	
 
 
 
@@ -53,6 +119,7 @@ var	deleteItem = function (){
 var clearLocal = function(){
 
 };
+
 
 
 

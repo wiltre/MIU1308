@@ -13,12 +13,42 @@ label.error{
 	
 }
 
+#errosspace{
+	background-color: rgba(233,233,233,1)
+}
+
+#errosspace li{
+	color:#f30404;
+	text-align: center;
+}
 
 
+#erroslik{
+	display: none;
+	
+}
 
 
+.hint{
+	margin: 2px 0;
+	margin-top: -5px;
+	color: #cdcdcd;
+	font-size: smaller;
+		
+}
 
+.requireds{
+	margin-top: 4px;
+	margin-bottom: 2px;
+	color: #cdcdcd;
+	font-size: smaller;
+	
+}
 
+.ui-field-contain.ui-body.ui-br {
+	padding-bottom: 3px;
+	
+}
 
 
 
