@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- This is the first Project of MIU for FSO -->
+<!-- FSO Course is MIU 1308-->
+<!-- Developer name Wiltre Santiago-->
+<!-- App name is Fruit Tracker -->
+
+<html>
+	<head>		
+		<meta charset="utf-8"/>
+		<meta name="keywords" content="html5, item, retail, Fuit list"/>
+		<meta name="description" content="Project HTML5 application"/>
+		<meta name="robots" content="index, follow"/>
+		<meta name="viewport" content="user-scalable=no, width=device-width"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<title>Fruit Tracker</title>
+		<link href="css/cssreset.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
+		<link href="css/mainformcss.css" rel="stylesheet" />
+	</head>
+	
+	<body>	
+		<div data-role="page" id="addFruit">
+			<div data-role="header" data-position="fixed">
+				<h1>Input your fruit</h1>
+			</div>
+			<!-- Content and form are below  -->
+			<div data-role="content" data-ajax="false">
+				<form action="#" method="post" id="fruittracker">
+				
+				<div data-role="fieldcontain">
+					<label for="FruitCategory"> Fruit Category: </label>
+					<select name="FruitCategory" id="FruitCategory" data-native-menu="false" class="required">
+						<option data-placeholder="true" value> --- Select a Category ---</option>
+						<option value="Berries">Berries </option>
+						<option value="Citrus">Citrus </option>
+						<option value="Grapes">Grapes </option>
+						<option value="Tropical">Tropical </option>
+						<option value="Others">Others </option>
+					</select>
+					<div class="requireds">* Required field </div>					
+				</div>
+				
+			
+				<div data-role="fieldcontain">
+					<label id="fruitNames" for="fruitName">Fruit Name:</label>
+					<input type="text" name="FruitName" id="FruitName" placeholder=" type the fruit name" class="required"/>
+					<div class="requireds">* Required field </div>
+				</div>
+
+				
+				<div data-role="fieldcontain">
+					<label id="lweb" for="StoreName">Sale Place:</label>
+					<input type="text" name="StoreName" id="StoreName"  placeholder=" type store name  " class="required" />
+					<div class="requireds">* Required field </div>
+				</div>
+				
+				<div data-role="fieldcontain" >
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<legend>Require Refrigeration: </legend>
+						<div class="hint">Select if require refrigeration</div>
+						<input type="radio" value="Yes" name="refrigeration" id="Yes" />
+						<label for="Yes">YES</label>
+						<input type="radio" value="No" name="refrigeration" id="No"  />
+						<label for="No">NO</label>
+					</fieldset>
+				</div>
+						
+				
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Check below if is your favorite</legend>
+						<label for="favorite">Favorite</label>
+						<input type="checkbox" name="favorite" id="favorite" />
+					</fieldset>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="days">Days that last:</label>
+					<input type="range" name="days" value="1" min="1" max="10" id="days"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="date">Purchased Date:</label>
+					<input type="date" name="date" id="date"placeholder=" MM/DD/YYYY"/>
+				</div>
+				
+				<div data-role="fieldcontain">
+					<label for="itemsNotes">Other notes:</label>
+					<textarea id="itemsNotes"> </textarea>
+				</div>
+				
+				<input type="submit" value="Submit the item" id="submit" data-theme="a"/>
+				<input type="reset" value="Reset Form" id="reset"/>			
+				
+				
+				<!-- <a href="#addFruiterrors" id="erroslik" data-rel="dialog" data-transition="pop"> Open Errors</a>  pop error-->
+				</form>
+				
+			</div> <!-- End of content -->
+			
+			 <!-- Footer Section -->
+           <div data-role="footer" data-position="fixed">
+               <div data-role="navbar"><!-- Start of the navbar -->
+                    <ul>
+                        <li><a href="index.html#home" rel="external" target="_self" data-icon="home" data-transition="slide">Home</a></li>
+                        <li><a href="index.html#about" target="_self" data-icon="info" data-transition="slide">About</a></li>
+                        <li><a href="index.html#news" target="_self" data-icon="c_news" data-transition="slide">News</a></li>
+                    </ul>
+               </div><!-- End of the navbar -->
+           </div><!-- End of the footer page -->	
+		</div> <!-- End of the Main Page Form -->
+		
+		
+		<!-- Dialog box page below  -->
+		
+	<!-- Code below it was the attempt of the pop list view 
+	<div data-role="dialog" id="addFruiterrors">
+		
+			<div data-role="header" data-position="fixed">
+				<h1>Some fields are missing </h1>				
+			</div>
+			
+			
+			<div data-role"content">
+				<ul id="errosspace">
+					<li> Test </li>
+					<li> Test </li>
+					<li> Test </li>
+					<li> Test </li>
+				</ul>			
+			</div> 
+		</div> 
+-->
+		
+		
+		
+		<!-- 	Scripts are below	 -->
+		
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>  
+		<script src="js/libs/jquery.validate.min.js" type="text/javascript"></script>	
+		<script src="js/json.js" type="text/javascript"></script>			    
+        <script src="js/additemjs.js" type="text/javascript"></script> 
+	</body>
+</html>
+
+
+<!--   Original code below 
+******************************************************************
+<div id="formWrap">	
+		    <form action="#" method="post" id="fruittracker">
+				<fieldset id="field">
+					<h1>Input your fruit</h1>
+					<ul>
+						<li id="category">
+							<label id="litem" for="item"> Fruit Category: </label>
+						</li>
+						
+						<li>
+							<label id="fname" for="fruitName">Fruit Name:</label>
+							<input type="text" id="fruitName"/>
+						</li>
+						
+						<li><label id="lweb" for="webSite">Sale Place:</label><input type="text" id="webSite" placeholder="       Wegmas Supermarket  " /></li>
+						<li> Require Refrigeration
+							<ul>
+								<li><input type="radio" value="Yes" id="Yes" name="sLocation" /><label for="Yes">YES</label></li>
+								<li><input type="radio" value="No" id="No" name="sLocation" /><label for="No">NO</label></li>
+							</ul>
+						</li>
+						<li><input type="checkbox" id="nearPurchase" /><label for="nearPurchase">Favorite</label></li>
+						<li><label for="priority">Days that last:</label><input type="range" min="1" max="10" id="priority"/></li>
+						<li><label for="date">Purchased Date:</label><input type="date" id="date"/></li>
+						<li><label for="itemsNotes">Other notes:</label><input type="text" id="itemsNotes"> </</li>
+						<li id="hidden"><input type="hidden" value="true"/></li>
+					</ul>
+					<ul id="errors"> </ul>
+				</fieldset>
+				<input type="button" value="Submit the item" id="submit"/>
+				<div id="dataControls">  
+					<a href="#" id="display"> Display Stored Data </a>
+					<a href="#" id="clear"> Clear Stored Data </a>					
+			    </div> 			    
+			</form>
+			
+		</div>
+		
+		<div id="formWrap">	
+		    <form action="#" method="post" id="fruittracker">
+				<fieldset id="field">
+					<h1>Input your fruit</h1>
+					<ul>
+						<li id="category"><label id="litem" for="item"> Fruit Category: </label></li>
+						<li><label id="fname" for="fruitName">Fruit Name:</label><input type="text" id="fruitName"/></li>
+						<li><label id="lweb" for="webSite">Sale Place:</label><input type="text" id="webSite" placeholder="       Wegmas Supermarket  " /></li>
+						<li> Require Refrigeration
+							<ul>
+								<li><input type="radio" value="Yes" id="Yes" name="sLocation" /><label for="Yes">YES</label></li>
+								<li><input type="radio" value="No" id="No" name="sLocation" /><label for="No">NO</label></li>
+							</ul>
+						</li>
+						<li><input type="checkbox" id="nearPurchase" /><label for="nearPurchase">Favorite</label></li>
+						<li><label for="priority">Days that last:</label><input type="range" min="1" max="10" id="priority"/></li>
+						<li><label for="date">Purchased Date:</label><input type="date" id="date"/></li>
+						<li><label for="itemsNotes">Other notes:</label><input type="text" id="itemsNotes"> </</li>
+						<li id="hidden"><input type="hidden" value="true"/></li>
+					</ul>
+					<ul id="errors"> </ul>
+				</fieldset>
+				<input type="button" value="Submit the item" id="submit"/>
+				<div id="dataControls">  
+					<a href="#" id="display"> Display Stored Data </a>
+					<a href="#" id="clear"> Clear Stored Data </a>					
+			    </div> 			    
+			</form>
+			
+		</div>
+		<input type="button" value="Add new Item" id="newItem" style="display:none"/>
+		
+		
+-->
