@@ -58,9 +58,9 @@
 					<fieldset data-role="controlgroup" data-type="horizontal">
 						<legend>Require Refrigeration: </legend>
 						<div class="hint">Select if require refrigeration</div>
-						<input type="radio" value="Yes" name="refrigeration" id="Yes" />
+						<input type="radio" value="Yes" name="refrigeration" id="Yes"  /> 
 						<label for="Yes">YES</label>
-						<input type="radio" value="No" name="refrigeration" id="No"  />
+						<input type="radio" value="No" name="refrigeration" id="No" checked="checked" /> <!-- Default Value NO added -->
 						<label for="No">NO</label>
 					</fieldset>
 				</div>
@@ -70,13 +70,13 @@
 					<fieldset data-role="controlgroup">
 						<legend>Check below if is your favorite</legend>
 						<label for="favorite">Favorite</label>
-						<input type="checkbox" name="favorite" id="favorite" />
+						<input type="checkbox" name="favorite" id="favorite" checked="checked"/> <!-- Default Value Favorite added -->
 					</fieldset>
 				</div>
 				
 				<div data-role="fieldcontain">
 					<label for="days">Days that last:</label>
-					<input type="range" name="days" value="1" min="1" max="10" id="days"/>
+					<input type="range" name="days" value="3" min="1" max="10" id="days"/>   <!-- Default Value 3 added -->
 				</div>
 				
 				<div data-role="fieldcontain">
