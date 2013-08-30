@@ -14,17 +14,18 @@
 		<meta name="HandheldFriendly" content="true"/>
 		<title>Fruit Tracker</title>
 		<link href="css/cssreset.css" rel="stylesheet"/>
+		<link href="css/tropicala.css" rel="stylesheet"/>
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.css" />
 		<link href="css/mainformcss.css" rel="stylesheet" />
 	</head>
 	
-	<body>	
-		<div data-role="page" id="addFruit">
-			<div data-role="header" data-position="fixed">
+	<body data-theme="g">	
+		<div data-role="page" data-theme="g" id="addFruit">
+			<div data-role="header"  data-theme="g" data-position="fixed">
 				<h1>Input your fruit</h1>
 			</div>
 			<!-- Content and form are below  -->
-			<div data-role="content" data-ajax="false">
+			<div data-role="content"  data-theme="g" data-ajax="false">
 				<form action="#" method="post" id="fruittracker">
 				
 				<div data-role="fieldcontain">
@@ -55,10 +56,10 @@
 				</div>
 				
 				<div data-role="fieldcontain" >
-					<fieldset data-role="controlgroup" data-type="horizontal">
+					<fieldset data-role="controlgroup" data-type="horizontal" data-theme="g">
 						<legend>Require Refrigeration: </legend>
-						<div class="hint">Select if require refrigeration</div>
-						<input type="radio" value="Yes" name="refrigeration" id="Yes"  /> 
+						<div class="hint" >Select if require refrigeration</div>
+						<input type="radio" value="Yes" name="refrigeration" id="Yes" data-theme="g" /> 
 						<label for="Yes">YES</label>
 						<input type="radio" value="No" name="refrigeration" id="No" checked="checked" /> <!-- Default Value NO added -->
 						<label for="No">NO</label>
@@ -66,7 +67,7 @@
 				</div>
 						
 				
-				<div data-role="fieldcontain">
+				<div data-role="fieldcontain" data-theme="g">
 					<fieldset data-role="controlgroup">
 						<legend>Check below if is your favorite</legend>
 						<label for="favorite">Favorite</label>
@@ -74,22 +75,22 @@
 					</fieldset>
 				</div>
 				
-				<div data-role="fieldcontain">
+				<div data-role="fieldcontain" data-theme="g">
 					<label for="days">Days that last:</label>
-					<input type="range" name="days" value="3" min="1" max="10" id="days"/>   <!-- Default Value 3 added -->
+					<input type="range" name="days" value="3" min="1" max="10" id="days"data-theme="g"/>   <!-- Default Value 3 added -->
 				</div>
 				
-				<div data-role="fieldcontain">
-					<label for="date">Purchased Date:</label>
+				<div data-role="fieldcontain"data-theme="g">
+					<label for="date" >Purchased Date:</label>
 					<input type="date" name="date" id="date"placeholder=" MM/DD/YYYY"/>
 				</div>
 				
-				<div data-role="fieldcontain">
+				<div data-role="fieldcontain" data-theme="g">
 					<label for="itemsNotes">Other notes:</label>
 					<textarea id="itemsNotes"> </textarea>
 				</div>
 				
-				<input type="submit" value="Submit the item" id="submit" data-theme="a"/>
+				<input type="submit" value="Submit the item" id="submit" data-theme="f"/>
 				<input type="reset" value="Reset Form" id="reset"/>			
 				
 				
@@ -99,7 +100,7 @@
 			</div> <!-- End of content -->
 			
 			 <!-- Footer Section -->
-           <div data-role="footer" data-position="fixed">
+           <div data-role="footer" data-position="fixed" data-theme="g">
                <div data-role="navbar"><!-- Start of the navbar -->
                     <ul>
                         <li><a href="index.html#home" rel="external" target="_self" data-icon="home" data-transition="slide">Home</a></li>
@@ -111,29 +112,7 @@
 		</div> <!-- End of the Main Page Form -->
 		
 		
-		<!-- Dialog box page below  -->
-		
-	<!-- Code below it was the attempt of the pop list view 
-	<div data-role="dialog" id="addFruiterrors">
-		
-			<div data-role="header" data-position="fixed">
-				<h1>Some fields are missing </h1>				
-			</div>
 			
-			
-			<div data-role"content">
-				<ul id="errosspace">
-					<li> Test </li>
-					<li> Test </li>
-					<li> Test </li>
-					<li> Test </li>
-				</ul>			
-			</div> 
-		</div> 
--->
-		
-		
-		
 		<!-- 	Scripts are below	 -->
 		
 		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
@@ -145,77 +124,3 @@
 </html>
 
 
-<!--   Original code below 
-******************************************************************
-<div id="formWrap">	
-		    <form action="#" method="post" id="fruittracker">
-				<fieldset id="field">
-					<h1>Input your fruit</h1>
-					<ul>
-						<li id="category">
-							<label id="litem" for="item"> Fruit Category: </label>
-						</li>
-						
-						<li>
-							<label id="fname" for="fruitName">Fruit Name:</label>
-							<input type="text" id="fruitName"/>
-						</li>
-						
-						<li><label id="lweb" for="webSite">Sale Place:</label><input type="text" id="webSite" placeholder="       Wegmas Supermarket  " /></li>
-						<li> Require Refrigeration
-							<ul>
-								<li><input type="radio" value="Yes" id="Yes" name="sLocation" /><label for="Yes">YES</label></li>
-								<li><input type="radio" value="No" id="No" name="sLocation" /><label for="No">NO</label></li>
-							</ul>
-						</li>
-						<li><input type="checkbox" id="nearPurchase" /><label for="nearPurchase">Favorite</label></li>
-						<li><label for="priority">Days that last:</label><input type="range" min="1" max="10" id="priority"/></li>
-						<li><label for="date">Purchased Date:</label><input type="date" id="date"/></li>
-						<li><label for="itemsNotes">Other notes:</label><input type="text" id="itemsNotes"> </</li>
-						<li id="hidden"><input type="hidden" value="true"/></li>
-					</ul>
-					<ul id="errors"> </ul>
-				</fieldset>
-				<input type="button" value="Submit the item" id="submit"/>
-				<div id="dataControls">  
-					<a href="#" id="display"> Display Stored Data </a>
-					<a href="#" id="clear"> Clear Stored Data </a>					
-			    </div> 			    
-			</form>
-			
-		</div>
-		
-		<div id="formWrap">	
-		    <form action="#" method="post" id="fruittracker">
-				<fieldset id="field">
-					<h1>Input your fruit</h1>
-					<ul>
-						<li id="category"><label id="litem" for="item"> Fruit Category: </label></li>
-						<li><label id="fname" for="fruitName">Fruit Name:</label><input type="text" id="fruitName"/></li>
-						<li><label id="lweb" for="webSite">Sale Place:</label><input type="text" id="webSite" placeholder="       Wegmas Supermarket  " /></li>
-						<li> Require Refrigeration
-							<ul>
-								<li><input type="radio" value="Yes" id="Yes" name="sLocation" /><label for="Yes">YES</label></li>
-								<li><input type="radio" value="No" id="No" name="sLocation" /><label for="No">NO</label></li>
-							</ul>
-						</li>
-						<li><input type="checkbox" id="nearPurchase" /><label for="nearPurchase">Favorite</label></li>
-						<li><label for="priority">Days that last:</label><input type="range" min="1" max="10" id="priority"/></li>
-						<li><label for="date">Purchased Date:</label><input type="date" id="date"/></li>
-						<li><label for="itemsNotes">Other notes:</label><input type="text" id="itemsNotes"> </</li>
-						<li id="hidden"><input type="hidden" value="true"/></li>
-					</ul>
-					<ul id="errors"> </ul>
-				</fieldset>
-				<input type="button" value="Submit the item" id="submit"/>
-				<div id="dataControls">  
-					<a href="#" id="display"> Display Stored Data </a>
-					<a href="#" id="clear"> Clear Stored Data </a>					
-			    </div> 			    
-			</form>
-			
-		</div>
-		<input type="button" value="Add new Item" id="newItem" style="display:none"/>
-		
-		
--->
